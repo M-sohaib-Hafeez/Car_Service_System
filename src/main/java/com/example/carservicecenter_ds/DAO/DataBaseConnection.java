@@ -9,8 +9,8 @@ public class DataBaseConnection {
     public static Connection connect(){
         try {
             String url= "jdbc:mysql://localhost/car_service_center";
-            String username="root";
-            String password="03488339040Hammad";
+            String username="your_mysql_username";
+            String password="your_mysql_password";
 
             conn = DriverManager.getConnection(url,username,password);
             System.out.println("Database connected successfully");
