@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.carservicecenter_ds.controllers.adminMechanicController">
+   <children>
+      <HBox minHeight="100.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-border-color: #e6e6e6; -fx-border-width: 0 0 1px 0;" styleClass="adminMechanicNav">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #12372a;" text="Mechanics" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button fx:id="mechanicRequests" mnemonicParsing="false" onAction="#mechanicRequests" style="-fx-background-color: #12372a; -fx-text-fill: white; -fx-font-weight: 600; -fx-font-size: 14px; -fx-padding: 8px 16px; -fx-border-radius: 4px; -fx-background-radius: 4px;" text="Mechanic Requests">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+      </HBox>
+      <ScrollPane fitToWidth="true" hbarPolicy="NEVER" pannable="true" styleClass="mechanicScrollpane" vbarPolicy="ALWAYS" VBox.vgrow="ALWAYS">
+         <content>
+            <FlowPane fx:id="mechanicsRoot" hgap="20.0" nodeOrientation="LEFT_TO_RIGHT" orientation="HORIZONTAL" vgap="20.0">
+               <padding>
+                  <Insets left="20.0" top="30.0" />
+               </padding></FlowPane>
+         </content>
+      </ScrollPane>
+   </children>
+</VBox>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane styleClass="login-root" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.carservicecenter_ds.controllers.LoginController">
+
+    <BorderPane prefHeight="650" prefWidth="1100">
+
+        <!-- BACKGROUND SLASH -->
+        <center>
+            <StackPane>
+
+
+
+        <!-- RIGHT LOGIN PANEL (your createLeftPanel) -->
+            <VBox alignment="CENTER" spacing="15" styleClass="login-left-panel" translateY="-40">
+
+                <Label styleClass="form-title" text="Welcome Back" />
+
+                    <Label styleClass="form-subtitle" text="Sign in to your account" />
+
+                    <VBox maxWidth="330" spacing="16">
+
+                        <Label styleClass="form-label" text="Email" />
+                        <TextField fx:id="emailField" promptText="Enter your Email" styleClass="form-input" />
+
+                        <Label styleClass="form-label" text="Password" />
+                        <PasswordField fx:id="passwordField" promptText="Enter your password" styleClass="form-input" />
+                        <Label fx:id="errorLabel" styleClass="error-message" visible="false" />
+
+<!--                        <Label fx:id="demoLabel"-->
+<!--&lt;!&ndash;                               text="Demo Credentials: Admin: admin / admin123 Customer: demo / demo123"&ndash;&gt;-->
+<!--                               styleClass="demo-note"/>-->
+
+                        <Button maxWidth="Infinity" onAction="#handleLogin" styleClass="login-button" text="Login" />
+
+
+
+<!--                        Signup-->
+                        <HBox alignment="CENTER" spacing="6">
+                            <Label styleClass="signup-text" text="Don't have an account?" />
+
+                            <Label onMouseClicked="#openSignUp" styleClass="signup-link" text="Sign up" />
+                        </HBox>
+
+
+
+                </VBox>
+
+            </VBox>
+
+
+
+            </StackPane>
+        </center>
+
+        <!-- LEFT INFO PANEL (your createRightPanel) -->
+        <right>
+            <VBox alignment="TOP_LEFT" prefHeight="650.0" prefWidth="400.0" spacing="30" styleClass="login-right-panel">
+
+
+            <Label styleClass="login-title" text="Car Service Center" />
+
+                <Label styleClass="login-subtitle" text="Professional Automotive Services" />
+
+                <VBox prefWidth="451.0">
+                    <Label styleClass="features-title" text="Our Services:" />
+                    <Label styleClass="feature-item" text="✓ Complete Vehicle Maintenance" />
+                    <Label styleClass="feature-item" text="✓ Engine Diagnostics and Repair" />
+                    <Label styleClass="feature-item" text="✓ Brake System Services" />
+                    <Label styleClass="feature-item" text="✓ Oil Changes and Fluid Services" />
+                    <Label styleClass="feature-item" text="✓ Tire Rotation and Alignment" />
+                    <Label styleClass="feature-item" text="✓ AC System Repair" />
+                </VBox>
+
+            </VBox>
+        </right>
+
+    </BorderPane>
+
+    <!-- CAR IMAGE (animation handled in controller) -->
+    <ImageView fx:id="carImage" fitWidth="500" preserveRatio="true" translateX="60" translateY="100" StackPane.alignment="BOTTOM_RIGHT" />
+
+
+
+</StackPane>

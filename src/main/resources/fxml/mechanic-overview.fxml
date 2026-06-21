@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox spacing="25" styleClass="page-root" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.carservicecenter_ds.controllers.MechanicOverviewController">
+
+    <!-- TOP SECTION -->
+    <Label styleClass="page-title" text="Mechanic Dashboard">
+      <font>
+         <Font name="System Bold" size="22.0" />
+      </font></Label>
+
+
+    <HBox alignment="CENTER_LEFT" spacing="40">
+
+        <!-- CHART PLACEHOLDER -->
+        <VBox styleClass="chart-card">
+            <Label lineSpacing="1.5" styleClass="section-title" text="Weekly Jobs">
+            <font>
+               <Font name="System Bold Italic" size="15.0" />
+            </font></Label>
+            <BarChart fx:id="weeklyChart" prefHeight="309.0" prefWidth="520">
+                <xAxis>
+                    <CategoryAxis label="Day" />
+                </xAxis>
+                <yAxis>
+                    <NumberAxis label="Jobs" />
+                </yAxis>
+            </BarChart>
+<!--            <Pane prefHeight="180" prefWidth="350" styleClass="chart-placeholder" />-->
+        </VBox>
+
+
+
+        <!-- CAR IMAGE -->
+        <VBox alignment="TOP_RIGHT" prefWidth="420">
+
+            <ImageView fitHeight="320" preserveRatio="true" smooth="true">
+                <image>
+
+
+                    <Image url="@../images/carMechanic.png" />
+                </image>
+            </ImageView>
+        </VBox>
+
+
+
+
+    </HBox>
+
+    <!-- STATS CARDS -->
+    <HBox prefWidth="1142.0" spacing="20">
+
+        <HBox alignment="CENTER_LEFT" styleClass="stat-card">
+            <Label text="Total Jobs" />
+
+            <Region HBox.hgrow="ALWAYS" />
+
+            <Label fx:id="totalLabel" styleClass="stat-value" />
+        </HBox>
+
+        <HBox alignment="CENTER_LEFT" styleClass="stat-card">
+            <Label text="Active Jobs" />
+
+            <Region HBox.hgrow="ALWAYS" />
+
+            <Label fx:id="activeLabel" styleClass="stat-value" />
+        </HBox>
+
+        <HBox alignment="CENTER_LEFT" styleClass="stat-card">
+            <Label text="Completed Jobs" />
+
+            <Region HBox.hgrow="ALWAYS" />
+
+            <Label fx:id="completedLabel" styleClass="stat-value" />
+        </HBox>
+
+
+
+    </HBox>
+
+</VBox>

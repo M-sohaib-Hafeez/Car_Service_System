@@ -1,0 +1,864 @@
+/* Root background */
+.root{
+    -main-green:#014f32;
+}
+.login-root {
+    -fx-background-color: #e8e4dc; /* warm beige */
+}
+
+/* Login (center) panel */
+.login-left-panel {
+    -fx-background-color: rgba(245, 242, 236, 0.92);
+    -fx-padding: 40;
+}
+
+/* Login title */
+.form-title {
+    -fx-text-fill: #1f2933;
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+}
+
+.form-subtitle {
+    -fx-text-fill: #4b5563;
+    -fx-font-size: 15px;
+}
+
+.form-label {
+    -fx-text-fill: #374151;
+    -fx-font-size: 15px;
+    -fx-font-weight: 600;
+}
+
+
+
+/* Right panel background – calmer */
+.login-right-panel {
+    -fx-background-color: #12372a;
+    -fx-padding: 45 30;
+    -fx-background-radius: 18 0 0 18; /* curve ONLY left side */
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.18),
+            18,
+            0.15,
+            -4,
+            0
+    );
+}
+
+
+
+/* Brand title */
+/* Right titles */
+.login-title {
+    -fx-text-fill: #f0fdf4;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+/* Subtitle */
+.login-subtitle {
+    -fx-text-fill: #bbf7d0;
+    -fx-font-size: 13px;
+}
+
+/* Our Services title */
+.features-title {
+    -fx-text-fill: #86efac;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* Services list */
+.feature-item {
+    -fx-text-fill: #ecfdf5;
+    -fx-font-size: 12.5px;
+}
+
+
+
+/* Diagonal slash */
+.center-slash {
+    -fx-fill: linear-gradient(
+            to right,
+            rgba(29,185,84,0.01),
+            rgba(29,185,84,0.08),
+            rgba(29,185,84,0.01)
+    );
+}
+
+
+.form-input {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #1f7a55;
+    -fx-border-width: 0 0 2.5 0;
+    -fx-text-fill: #111827;
+    -fx-prompt-text-fill: #9ca3af;
+    -fx-font-size: 16px;
+    -fx-padding: 10 6;
+}
+
+
+.form-input:focused {
+    -fx-border-color: #15803d;
+}
+
+.demo-note {
+    -fx-text-fill: #6b7280;
+    -fx-font-size: 12px;
+    -fx-opacity: 0.75;
+}
+
+.login-button {
+    -fx-background-color: linear-gradient(to right, #1db954, #16a34a);
+    -fx-text-fill: #0e0e0e;
+    -fx-font-weight: bold;
+    -fx-background-radius: 25;
+    -fx-padding: 10 0;
+}
+
+.login-button:hover {
+    -fx-background-color: linear-gradient(to right, #22c55e, #1db954);
+}
+
+.error-message {
+    -fx-text-fill: #dc2626;   /* red */
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+}
+
+
+/* Sign up text */
+.signup-text {
+    -fx-text-fill: #4b5563;
+    -fx-font-size: 13px;
+}
+
+/* Clickable sign up link */
+.signup-link {
+    -fx-text-fill: #15803d;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.signup-link:hover {
+    -fx-underline: true;
+}
+
+/* sigun page */
+
+.SignUp-root {
+    -fx-background-color: #e8e4dc;
+}
+
+.right-SignUp-Panel{
+    -fx-background-color: rgba(245, 242, 236, 0.92);
+}
+
+/* Login title */
+
+.SignUp-form-title {
+    -fx-text-fill: #1f2933;
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+}
+
+.SignUp-form-subtitle {
+    -fx-text-fill: #4b5563;
+    -fx-font-size: 15px;
+}
+
+
+
+/* left panel background – calmer */
+
+.SignUp-Left_panel{
+    -fx-text-fill: #12372a;
+    -fx-padding: 45 30;
+    -fx-background-color:  #12372a ;
+    -fx-background-radius: 0 18 18 0; /* curve ONLY on right side */
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.18),
+            18,
+            0.15,
+            -4,
+            0
+    );
+}
+.left-description-title{
+    -fx-text-fill: #f0fdf4;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+.left-description-subtitle{
+    -fx-text-fill: #bbf7d0;
+    -fx-font-size: 13px;
+}
+
+.features-title {
+    -fx-text-fill: #86efac;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* Services list */
+.feature-item {
+    -fx-text-fill: #ecfdf5;
+    -fx-font-size: 12.5px;
+}
+
+/* SignUp form input*/
+
+.signUp-input {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #1f7a55;
+    -fx-border-width: 0 0 2.5 0;
+    -fx-text-fill: #111827;
+    -fx-prompt-text-fill: #9ca3af;
+    -fx-font-size: 16px;
+    -fx-padding: 10 6;
+}
+
+.signUp:focused {
+    -fx-border-color: #15803d;
+}
+
+/*login button*/
+.signUp-button {
+    -fx-background-color: linear-gradient(to right, #1db954, #16a34a);
+    -fx-text-fill: #0e0e0e;
+    -fx-font-weight: bold;
+    -fx-background-radius: 25;
+    -fx-padding: 10 0;
+}
+
+.login-here{
+    -fx-text-fill: #15803d ;
+    -fx-font-weight: bold;
+}
+
+.login-here:hover .text{
+    -fx-underline: true;
+}
+
+.nav-root{
+    -fx-background-color:rgba(245, 242, 236, 0.92);
+}
+
+
+.side-bar {
+    -fx-background-color: #12372a;
+    -fx-padding: 28 18;
+    -fx-background-radius: 0 26 26 0;
+}
+
+
+
+/*.menu-title{*/
+/*    -fx-text-fill: white;*/
+/*    -fx-font-size: 15;*/
+/*}*/
+
+/* Menu item container */
+.menu-item {
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 12 20;
+    -fx-background-radius: 22;
+    -fx-min-height: 44;
+    -fx-cursor: hand;
+}
+
+
+.menu-option {
+    -fx-text-fill: #cbd5e1;
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+}
+
+
+
+
+
+/*.menu-option:hover {*/
+/*    -fx-background-color: rgba(255,255,255,0.15);*/
+/*    -fx-background-radius: 10;*/
+/*}*/
+
+/*.menu-option:hover {*/
+/*    -fx-background-color: #334155;*/
+/*}*/
+
+/*.menu-option:hover {*/
+/*    -fx-text-fill: white;*/
+/*}*/
+.menu-item:hover .menu-option {
+    -fx-text-fill: white;
+}
+
+/*.menu-option.active {*/
+/*    -fx-background-color: #0f766e;*/
+/*    -fx-text-fill: white;*/
+/*    -fx-font-weight: bold;*/
+/*}*/
+
+.menu-item.active .menu-option {
+    -fx-text-fill: #145a32;
+    -fx-font-weight: 700;
+}
+.menu-item:hover {
+    -fx-background-color: rgba(244,241,236,0.12);
+}
+
+/*.menu-item.active .menu-indicator {*/
+/*    -fx-background-color: #22c55e;*/
+/*}*/
+.menu-item.active {
+    -fx-background-color: #f4f1ec;
+    -fx-pref-width: 100%;
+}
+
+/*!* Indicator *!*/
+/*.menu-indicator {*/
+/*    -fx-pref-width: 3;*/
+/*    -fx-min-height: 18;*/
+/*    -fx-background-radius: 2;*/
+/*    -fx-background-color: transparent;*/
+/*}*/
+
+/*.menu-item.active .menu-indicator {*/
+/*    -fx-background-color: #22c55e; !* subtle green *!*/
+/*}*/
+
+
+/* Logout */
+.logout-btn {
+    -fx-background-color: white;
+    -fx-text-fill: #12372a;
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+    -fx-background-radius: 18;
+    -fx-padding: 10 24;
+    -fx-cursor: hand;
+}
+
+.logout-btn:hover {
+    -fx-background-color: #f1f5f9;
+}
+
+
+
+
+
+/* =========================
+   SIGN UP COMBOBOX STYLE
+   ========================= */
+
+.signUp-combo {
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 2 0;
+    -fx-border-color: #1f7a3f;   /* dark green */
+    -fx-font-size: 14px;
+    -fx-padding: 6 0 6 0;
+}
+
+/* Remove default box */
+.signUp-combo .combo-box-base {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+/* Arrow button */
+.signUp-combo .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.signUp-combo .arrow {
+    -fx-background-color: #1f7a3f;
+}
+
+/* Dropdown list */
+.signUp-combo .list-view {
+    -fx-background-color: white;
+    -fx-border-color: #1f7a3f;
+}
+
+/* List items */
+.signUp-combo .list-cell {
+    -fx-background-color: white;
+    -fx-text-fill: #333;
+    -fx-padding: 8 12;
+}
+
+/* Hover effect */
+.signUp-combo .list-cell:hover {
+    -fx-background-color: #e6f4ec;
+}
+
+
+
+
+/* Overlay title */
+.overlay-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1f2937;
+}
+
+/* Overlay card */
+.overlay-card {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-padding: 24;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 20, 0.3, 0, 4);
+}
+
+.form-control {
+    -fx-pref-height: 36;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+}
+
+
+/* Buttons */
+.primary-btn {
+    -fx-background-color: #1f7a4d;
+    -fx-text-fill: white;
+    -fx-padding: 8 22;
+    -fx-background-radius: 6;
+}
+
+.secondary-btn {
+    -fx-background-color: transparent;
+    -fx-border-color: #9ca3af;
+    -fx-text-fill: #374151;
+    -fx-border-radius: 6;
+    -fx-padding: 8 18;
+}
+
+.simple-combo {
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 2 0;
+    -fx-border-color: #1f7a3f;
+    -fx-font-size: 14px;
+}
+
+.simple-combo .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.simple-combo .arrow {
+    -fx-background-color: #1f7a3f;
+}
+
+/*cards*/
+.page-root {
+    -fx-padding: 30;
+}
+.page-root VBox {
+    -fx-padding: 0 10 0 0;
+}
+.page-root VBox ImageView {
+    -fx-translate-y: 20;
+}
+
+
+.chart-card {
+    -fx-background-color: white;
+    -fx-min-width: 560;
+    -fx-padding: 20;
+    -fx-background-radius: 18;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 18, 0.2, 0, 6);
+}
+.chart-bar {
+    -fx-bar-gap: 5;
+    -fx-category-gap: 30;
+}
+
+.chart-placeholder {
+    -fx-background-color: #f1f5f9;
+    -fx-background-radius: 12;
+}
+
+.stat-card {
+    -fx-background-color: white;
+    -fx-padding: 18 26;
+    -fx-pref-width: 300;
+    -fx-background-radius: 18;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 18, 0, 0, 6);
+}
+
+.stat-value {
+    -fx-font-size: 28;
+    -fx-font-weight: bold;
+}
+
+.job-card {
+    -fx-background-color: white;
+    -fx-padding: 18;
+    -fx-background-radius: 16;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 18, 0, 0, 6);
+}
+
+.job-card.completed {
+    -fx-opacity: 0.8;
+}
+
+/*dynamic content mechanic*/
+.content-area {
+    -fx-padding: 30;
+    -fx-background-color: #f4f1ec;
+}
+/*//mechaninc dashboard*/
+.page-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0f172a;
+}
+
+
+/* ===============================
+   ADMIN SIDEBAR – LABEL AS PILL
+   =============================== */
+
+.side-bar .menu-option {
+    -fx-padding: 12 20;
+    -fx-background-radius: 22;
+    -fx-cursor: hand;
+    -fx-alignment: CENTER_LEFT;
+}
+
+/* Hover effect (same feel as mechanic) */
+.side-bar .menu-option:hover {
+    -fx-background-color: rgba(244,241,236,0.12);
+    -fx-text-fill: white;
+}
+
+/* Click / selected look */
+.side-bar .menu-option:pressed {
+    -fx-background-color: #f4f1ec;
+    -fx-text-fill: #145a32;
+    -fx-font-weight: 700;
+}
+
+.side-bar .menu-option > .graphic {
+    -fx-padding: 0 10 0 0;
+}
+
+/* Selected (active) sidebar item */
+.side-bar .menu-option.active {
+    -fx-background-color: #f4f1ec;
+    -fx-text-fill: #145a32;
+    -fx-font-weight: 700;
+}
+
+.side-bar .menu-option {
+    -fx-max-width: Infinity;
+}
+
+
+/*service card*/
+
+.service-card {
+    -fx-background-color: #f8f9fa;
+    -fx-background-radius: 12;
+    -fx-border-color: #dee2e6;
+    -fx-border-radius: 12;
+    -fx-border-width: 1;
+    -fx-padding: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.08), 8, 0, 0, 2);
+    -fx-min-width: 320px;
+    -fx-min-height: 280px;
+    -fx-pref-width: 320px;
+    -fx-pref-height: 280px;
+    -fx-max-width: 320px;
+    -fx-max-height: 280px;
+}
+
+/* Hover effect */
+.service-card:hover {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #3498db;
+    -fx-effect: dropshadow(gaussian, rgba(52, 152, 219, 0.2), 12, 0, 0, 4);
+}
+
+/* Service icon */
+.service-icon {
+    -fx-fill: #3498db;
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+}
+
+/* Service name */
+.service-name {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+    -fx-padding: 0 0 5 0;
+}
+
+/* Detail icons */
+.detail-icon {
+    -fx-fill: #7f8c8d;
+    -fx-scale-x: 0.9;
+    -fx-scale-y: 0.9;
+}
+
+/* Description */
+.service-description {
+    -fx-font-size: 13px;
+    -fx-text-fill: #34495e;
+    -fx-wrap-text: true;
+    -fx-padding: 5 0;
+    -fx-font-style: italic;
+}
+
+/* Price styling */
+.service-price {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #27ae60;
+    -fx-padding: 3 0;
+}
+
+/* Time styling */
+.service-time {
+    -fx-font-size: 14px;
+    -fx-text-fill: #e67e22;
+    -fx-padding: 3 0;
+}
+
+/* Category styling */
+.service-category {
+    -fx-font-size: 14px;
+    -fx-text-fill: #9b59b6;
+    -fx-padding: 3 0;
+    -fx-font-weight: bold;
+}
+
+/* Button container */
+.button-box {
+    -fx-spacing: 10;
+    -fx-alignment: center-right;
+}
+
+/* Delete button */
+.delete-btn {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-padding: 6 12 6 12;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(231, 76, 60, 0.3), 4, 0, 0, 1);
+    -fx-content-display: left;
+    -fx-graphic-text-gap: 6;
+}
+
+.delete-btn:hover {
+    -fx-background-color: #c0392b;
+    -fx-effect: dropshadow(gaussian, rgba(231, 76, 60, 0.5), 6, 0, 0, 2);
+}
+
+.delete-btn:pressed {
+    -fx-background-color: #a93226;
+}
+
+/* Button icons */
+.button-icon {
+    -fx-fill: white;
+    -fx-scale-x: 0.8;
+    -fx-scale-y: 0.8;
+}
+
+/* Category-specific colors */
+.category-engine {
+    -fx-text-fill: #e74c3c;
+}
+
+.category-brakes {
+    -fx-text-fill: #3498db;
+}
+
+.category-tires {
+    -fx-text-fill: #2ecc71;
+}
+
+.category-electrical {
+    -fx-text-fill: #9b59b6;
+}
+
+.category-oil {
+    -fx-text-fill: #e67e22;
+}
+
+.category-transmission {
+    -fx-text-fill: #1abc9c;
+}
+
+.servicesRoot{
+    -fx-background-color:rgba(245, 242, 236, 0.92);
+}
+
+
+/*mechanic card*/
+
+.mechanicsRoot{
+    -fx-background-color:rgba(245, 242, 236, 0.92);
+}
+
+.mechanic-card {
+    -fx-background-color: #e8f5ee; /* Light version of #054f34 */
+    -fx-background-radius: 8;
+    -fx-border-color: #b8d5c7;
+    -fx-border-radius: 8;
+    -fx-border-width: 1;
+    -fx-padding: 12;
+    -fx-effect: dropshadow(gaussian, rgba(5, 79, 52, 0.15), 10, 0, 0, 2);
+}
+
+/* Hover effect for the card - JavaFX supports :hover pseudo-class */
+.mechanic-card:hover {
+    -fx-background-color: #d4eddf; /* Slightly darker on hover */
+    -fx-border-color: #0a7c52;
+    -fx-effect: dropshadow(gaussian, rgba(5, 79, 52, 0.25), 15, 0, 0, 4);
+}
+
+/* Name label style */
+.mechanic-name {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #054f34;
+    -fx-padding: 0 0 5 0;
+    -fx-border-color: #b8d5c7;
+    -fx-border-width: 0 0 1 0;
+}
+
+/* Detail labels style */
+.mechanic-detail {
+    -fx-font-size: 14px;
+    -fx-text-fill: #2c3e50;
+    -fx-padding: 3 0 3 0;
+}
+
+/* Special styling for status - using style class instead of :contains */
+.mechanic-status {
+    -fx-font-weight: bold;
+}
+
+.mechanic-rate {
+    -fx-text-fill: #054f34;
+    -fx-font-weight: bold;
+}
+
+/* Delete button style */
+.delete-btn {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 8 16 8 16;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.delete-btn:hover {
+    -fx-background-color: #c0392b;
+    -fx-effect: dropshadow(gaussian, rgba(231, 76, 60, 0.5), 8, 0, 0, 3);
+}
+
+.delete-btn:pressed {
+    -fx-background-color: #a93226;
+}
+
+.menu{
+    -fx-text-fill: white;
+    -fx-text-alignment: center;
+    -fx-font-size: 20;
+}
+
+/* admin nav bar*/
+
+/* Navigation Bar */
+.nav-bar {
+    -fx-background-color: #12372a;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 10, 0, 0, 3);
+    -fx-background-radius: 10;
+}
+
+/* Logo/Icon Styling */
+.nav-logo {
+    -fx-fill: white;
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 3, 0, 1, 1);
+}
+
+/* Navigation Button */
+.nav-button {
+    -fx-background-color: white;
+    -fx-text-fill: #12372a;
+    -fx-font-weight: 600;
+    -fx-font-size: 14px;
+    -fx-padding: 8 20;
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
+    -fx-cursor: hand;
+}
+
+.nav-button:hover {
+    -fx-background-color: #f5f5f5;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}
+
+.nav-button:pressed {
+    -fx-background-color: #e8e8e8;
+    -fx-translate-y: 1;
+}
+
+/* Optional: Add a subtle animation */
+.nav-button {
+    -fx-transition: -fx-background-color 0.2s, -fx-effect 0.2s;
+}
+
+/* Navigation sections */
+.nav-left, .nav-right {
+    -fx-pref-height: 70px;
+}
+
+/* Admin mechanic nav bar */
+
+.adminMechanicNav{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+/* admin mechanic scroll pan */
+
+.mechanicScrollpane{
+    -fx-background-color: transparent;
+}
+
+/* ScrollPane background transparent */
+.mechanicScrollpane {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+/* ScrollPane content pane (viewport) transparent */
+.mechanicScrollpane .viewport {
+    -fx-background-color: transparent;
+}
+
+/* Optional: Scroll bars bhi chhupana ho to */
+.mechanicScrollpane .scroll-bar {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+

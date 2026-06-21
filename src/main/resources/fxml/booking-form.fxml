@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="700.0" style="-fx-background-color: #f5f2ec;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.carservicecenter_ds.controllers.CustomerBookingController">
+
+    <!-- Header -->
+    <HBox alignment="CENTER_LEFT"  prefHeight="60.0" AnchorPane.topAnchor="10.0"
+          AnchorPane.leftAnchor="10.0"
+          AnchorPane.rightAnchor="10.0" style="-fx-background-color: #12372a; -fx-background-radius: 10;">
+        <padding>
+            <Insets left="20.0" right="20.0" />
+        </padding>
+        <Label text="📅 Book Service Appointment" textFill="#f0fdf4">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+    </HBox>
+
+    <!-- Form Content -->
+    <ScrollPane fitToWidth="true" AnchorPane.topAnchor="80.0"
+                AnchorPane.leftAnchor="10.0"
+                AnchorPane.rightAnchor="10.0"
+                AnchorPane.bottomAnchor="10.0" style="-fx-background: transparent; -fx-background-color: transparent;">
+        <VBox spacing="20.0">
+            <padding>
+                <Insets bottom="20.0" left="30.0" right="30.0" top="10.0" />
+            </padding>
+
+            <!-- Error/Success Message -->
+            <Label fx:id="messageLabel" style="-fx-background-color: #fee2e2; -fx-background-radius: 5; -fx-padding: 10; -fx-text-fill: #dc2626;" visible="false" wrapText="true">
+                <font>
+                    <Font name="System Bold" size="13.0" />
+                </font>
+            </Label>
+
+            <!-- Vehicle Selection -->
+            <VBox spacing="8.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);">
+                <padding>
+                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                </padding>
+                <Label text="🚗 Select Vehicle" textFill="#12372a">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="vehicleComboBox" prefWidth="640.0" promptText="Choose your vehicle"
+                          style="-fx-font-size:13px; -fx-background-color: white; -fx-border-color: #1f7a55; -fx-border-width: 0 0 2 0;">
+                </ComboBox>
+                <HBox alignment="CENTER_LEFT" spacing="5.0">
+                    <Label text="Don't see your vehicle?" textFill="#6b7280">
+                        <font>
+                            <Font size="11.0" />
+                        </font>
+                    </Label>
+                    <Hyperlink fx:id="addVehicleLink" onAction="#openAddVehicleForm" text="Add New Vehicle" style="-fx-text-fill: #15803d;">
+                        <font>
+                            <Font name="System Bold" size="11.0" />
+                        </font>
+                    </Hyperlink>
+                </HBox>
+            </VBox>
+
+            <!-- Service Selection -->
+            <VBox spacing="8.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);">
+                <padding>
+                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                </padding>
+                <Label text="🔧 Select Service" textFill="#12372a">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="serviceComboBox" prefWidth="640.0" promptText="Choose service type"
+                          style=" -fx-font-size:13px;-fx-background-color: white; -fx-border-color: #1f7a55; -fx-border-width: 0 0 2 0;">
+                </ComboBox>
+                <Label fx:id="serviceDetailsLabel" text="" textFill="#4b5563" wrapText="true">
+                    <font>
+                        <Font size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="servicePriceLabel" text="" textFill="#12372a">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Label>
+            </VBox>
+
+            <!-- Date and Time Selection -->
+            <VBox spacing="8.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);">
+                <padding>
+                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                </padding>
+                <Label text="📅 Schedule Appointment" textFill="#12372a">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+
+                <HBox spacing="15.0">
+                    <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                        <Label text="Date" textFill="#374151">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <DatePicker fx:id="appointmentDatePicker" prefWidth="310.0" promptText="Select date" style="-fx-background-color: white; -fx-border-color: #1f7a55; -fx-border-width: 0 0 2 0;" />
+                    </VBox>
+
+                    <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                        <Label text="Time" textFill="#374151">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <ComboBox fx:id="timeComboBox" prefWidth="310.0" promptText="Select time"
+                                  style="-fx-font-size:13px; -fx-background-color: white; -fx-border-color: #1f7a55; -fx-border-width: 0 0 2 0;">
+                        </ComboBox>
+                    </VBox>
+                </HBox>
+            </VBox>
+
+            <!-- Priority Selection -->
+            <VBox spacing="8.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);">
+                <padding>
+                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                </padding>
+                <Label text="⚡ Priority Level" textFill="#12372a">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="priorityComboBox" prefWidth="640.0"
+                          style="-fx-background-color: white; -fx-border-color: #1f7a55; -fx-border-width: 0 0 2 0; -fx-font-size: 13px;">
+                </ComboBox>
+                <Label text="💡 Emergency priority is for urgent situations only" textFill="#6b7280">
+                    <font>
+                        <Font size="11.0" />
+                    </font>
+                </Label>
+            </VBox>
+
+            <!-- Additional Notes -->
+            <VBox spacing="8.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);">
+                <padding>
+                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                </padding>
+                <Label text="📝 Additional Notes (Optional)" textFill="#12372a">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <TextArea fx:id="notesTextArea" prefHeight="80.0" prefWidth="640.0" promptText="Any specific concerns or requests?" style="-fx-background-color: white; -fx-border-color: #1f7a55; -fx-border-width: 1; -fx-border-radius: 5;" wrapText="true">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </TextArea>
+            </VBox>
+
+            <!-- Action Buttons -->
+            <HBox alignment="CENTER" spacing="15.0">
+                <Button mnemonicParsing="false" onAction="#handleCancel" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #6b7280; -fx-text-fill: white; -fx-background-radius: 20; -fx-cursor: hand;" text="Cancel">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="bookButton" mnemonicParsing="false" onAction="#handleBookAppointment" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to right, #1db954, #16a34a); -fx-text-fill: #0e0e0e; -fx-font-weight: bold; -fx-background-radius: 20; -fx-cursor: hand;" text="Book Appointment">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Button>
+            </HBox>
+
+        </VBox>
+    </ScrollPane>
+
+</AnchorPane>

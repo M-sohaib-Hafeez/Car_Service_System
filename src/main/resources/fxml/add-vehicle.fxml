@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: #f5f2ec;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.carservicecenter_ds.controllers.AddVehicleController">
+
+    <!-- Header -->
+    <HBox alignment="CENTER_LEFT" layoutY="10.0" prefHeight="50.0" prefWidth="500.0" style="-fx-background-color: #12372a; -fx-background-radius: 10;">
+        <padding>
+            <Insets left="20.0" right="20.0" />
+        </padding>
+        <Label text="🚗 Add New Vehicle" textFill="#f0fdf4">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+    </HBox>
+
+    <!-- Form Content -->
+    <VBox layoutY="70.0" prefHeight="420.0" prefWidth="500.0" spacing="15.0">
+        <padding>
+            <Insets bottom="20.0" left="30.0" right="30.0" top="10.0" />
+        </padding>
+
+        <!-- Error Message -->
+        <Label fx:id="errorLabel" style="-fx-background-color: #fee2e2; -fx-background-radius: 5; -fx-padding: 10; -fx-text-fill: #dc2626;" visible="false" wrapText="true">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+
+        <!-- License Plate -->
+        <VBox spacing="5.0">
+            <Label text="License Plate *" textFill="#374151">
+                <font>
+                    <Font name="System Bold" size="13.0" />
+                </font>
+            </Label>
+            <TextField fx:id="licensePlateField" promptText="e.g., ABC-123" styleClass="signUp-input">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </TextField>
+        </VBox>
+
+        <!-- Vehicle Type -->
+        <VBox spacing="5.0">
+            <Label text="Vehicle Type *" textFill="#374151">
+                <font>
+                    <Font name="System Bold" size="13.0" />
+                </font>
+            </Label>
+            <ComboBox fx:id="vehicleTypeComboBox" prefWidth="440.0" promptText="Select type" style="-fx-background-color: white; -fx-border-color: #1f7a55; -fx-border-width: 0 0 2 0;">
+                <font>
+                    <Font size="13.0" />
+                </font>
+            </ComboBox>
+        </VBox>
+
+        <!-- Make and Model -->
+        <HBox spacing="15.0">
+            <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                <Label text="Make *" textFill="#374151">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="makeField" promptText="e.g., Toyota" styleClass="signUp-input">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+            </VBox>
+
+            <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                <Label text="Model *" textFill="#374151">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="modelField" promptText="e.g., Camry" styleClass="signUp-input">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+            </VBox>
+        </HBox>
+
+        <!-- Year -->
+        <VBox spacing="5.0">
+            <Label text="Year *" textFill="#374151">
+                <font>
+                    <Font name="System Bold" size="13.0" />
+                </font>
+            </Label>
+            <TextField fx:id="yearField" promptText="e.g., 2020" styleClass="signUp-input">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </TextField>
+        </VBox>
+
+        <!-- Buttons -->
+        <HBox alignment="CENTER" spacing="15.0">
+            <padding>
+                <Insets top="10.0" />
+            </padding>
+            <Button mnemonicParsing="false" onAction="#handleCancel" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #6b7280; -fx-text-fill: white; -fx-background-radius: 18; -fx-cursor: hand;" text="Cancel">
+                <font>
+                    <Font name="System Bold" size="13.0" />
+                </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handleAddVehicle" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: linear-gradient(to right, #1db954, #16a34a); -fx-text-fill: #0e0e0e; -fx-font-weight: bold; -fx-background-radius: 18; -fx-cursor: hand;" text="Add Vehicle">
+                <font>
+                    <Font name="System Bold" size="13.0" />
+                </font>
+            </Button>
+        </HBox>
+
+    </VBox>
+
+</AnchorPane>

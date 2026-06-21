@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" styleClass="SignUp-root" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.carservicecenter_ds.controllers.SignUpController">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <VBox prefHeight="400.0" prefWidth="500.0" spacing="20.0" styleClass="SignUp-Left_panel">
+               <children>
+                  <Label styleClass="left-description-title" text="Car Service Center" />
+                  <Label styleClass="left-description-subtitle" text="Professional Automotive Services" />
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label styleClass="features-title" text="Our Services:" />
+                        <Label styleClass="feature-item" text="✓ Complete Vehicle Maintenance" />
+                        <Label styleClass="feature-item" text="✓ Engine Diagnostics and Repair" />
+                        <Label styleClass="feature-item" text="✓ Brake System Servicesabel" />
+                        <Label styleClass="feature-item" text="✓ Oil Changes and Fluid Services" />
+                        <Label styleClass="feature-item" text="✓ Tire Rotation and Alignment" />
+                        <Label styleClass="feature-item" text="✓ AC System Repair" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <AnchorPane fx:id="rightSignUpPanel" prefHeight="650.0" prefWidth="700.0" styleClass="right-SignUp-Panel">
+               <children>
+                  <VBox alignment="CENTER" layoutX="210.0" layoutY="100.0" prefWidth="346.0" spacing="10.0" styleClass="SignUp-form">
+                     <children>
+                        <Label contentDisplay="RIGHT" prefHeight="18.0" prefWidth="365.0" styleClass="form-label" text="Name" />
+                        <TextField fx:id="nameField"
+                                   promptText="Enter your name"
+                                   styleClass="signUp-input" />
+                        <Label prefHeight="18.0" prefWidth="371.0" styleClass="form-label" text="Email" />
+                        <TextField fx:id="emailField"
+                                   promptText="Enter your email"
+                                   styleClass="signUp-input" />
+                        <Label prefHeight="18.0" prefWidth="368.0" styleClass="form-label" text="Password" />
+                        <PasswordField fx:id="passwordField"
+                                       promptText="Enter your password"
+                                       styleClass="signUp-input" />
+                        <Label prefHeight="18.0" prefWidth="368.0" styleClass="form-label" text="Phone Number" />
+                        <TextField fx:id="phoneField"
+                                   promptText="Enter your phone number"
+                                   styleClass="signUp-input" />
+                        <Label prefHeight="18.0" prefWidth="368.0" styleClass="form-label" text="Role" />
+                        <ComboBox fx:id="roleComboBox" prefWidth="346.0" promptText="Select Role" styleClass="signUp-combo"> </ComboBox>
+
+                     </children>
+                  </VBox>
+                  <Label layoutX="328.0" layoutY="60.0" styleClass="SignUp-form-subtitle" text="Create Account" />
+                  <Label layoutX="317.0" layoutY="20.0" styleClass="SignUp-form-title" text="Welcome" />
+
+                  <!-- Moved Button down to 560 -->
+                  <Button layoutX="210.0" layoutY="560.0" mnemonicParsing="false" onAction="#handleSignUp" prefHeight="26.0" prefWidth="346.0" styleClass="signUp-button" text="SignUp" />
+
+                  <!-- Moved Login text down to 600 -->
+                  <Label layoutX="482.0" layoutY="600.0" onMouseClicked="#OpenLoginPage" styleClass="login-here" text="login here">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <Label layoutX="230.0" layoutY="600.0" text="Already have an account? click on this to login, " />
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <ImageView fx:id="carimage" fitHeight="466.0" fitWidth="464.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" translateX="-420.0" translateY="150.0">
+         <image>
+            <Image url="@../images/carlogin.png" />
+         </image>
+      </ImageView>
+      <!-- MECHANIC OVERLAY -->
+      <VBox fx:id="mechanicOverlay" alignment="CENTER" managed="false"  style="-fx-background-color: rgba(0,0,0,0.45);" visible="false">
+
+         <VBox fx:id="mechanicCard" maxWidth="420" minWidth="420" spacing="16" alignment="CENTER" styleClass="overlay-card">
+
+            <Label styleClass="overlay-title" text="Mechanic Registration" />
+
+            <ComboBox fx:id="specializationCombo" promptText="Select Specialization" styleClass="simple-combo" />
+
+            <TextField fx:id="experienceField" promptText="Years of Experience" styleClass="form-control" maxWidth="360" />
+
+            <TextField fx:id="hourlyRateField"  promptText="Hourly Rate (e.g. 1500)" styleClass="form-control" maxWidth="360" />
+
+
+            <HBox alignment="CENTER_RIGHT" spacing="10">
+               <Button onAction="#hideMechanicOverlay" styleClass="secondary-btn" text="Cancel" />
+               <Button onAction="#handleSignUp" styleClass="primary-btn" text="Continue" />
+            </HBox>
+
+         </VBox>
+      </VBox>
+
+
+   </children>
+</StackPane>

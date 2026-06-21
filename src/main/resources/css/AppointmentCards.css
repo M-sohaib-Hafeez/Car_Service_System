@@ -1,0 +1,264 @@
+/* Appointment Card Base Styles */
+.appointment-card {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.08), 8, 0, 0, 2);
+    -fx-min-width: 320px;
+    -fx-max-width: 400px;
+    -fx-cursor: hand;
+    -fx-alignment: top-left;
+    -fx-spacing: 0;
+}
+
+.appointment-card.card-hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 12, 0, 0, 3);
+    -fx-translate-y: -2px;
+    -fx-translate-x: 0px;
+    -fx-scale-x: 1.01;
+    -fx-scale-y: 1.01;
+    -fx-border-width: 1.5px;
+    -fx-transition: all 0.2s ease;
+}
+
+/* Status Indicator (colored left border) */
+.status-indicator {
+    -fx-background-radius: 8px 0 0 8px;
+    -fx-pref-height: 100%;
+    -fx-pref-width: 6px;
+    -fx-min-width: 6px;
+    -fx-max-width: 6px;
+}
+
+/* Status colors for indicators */
+.status-indicator.status-pending {
+    -fx-background-color: #ffd43b;
+}
+
+.status-indicator.status-scheduled {
+    -fx-background-color: #4dabf7;
+}
+
+.status-indicator.status-in-progress {
+    -fx-background-color: #ff922b;
+}
+
+.status-indicator.status-completed {
+    -fx-background-color: #51cf66;
+}
+
+.status-indicator.status-cancelled {
+    -fx-background-color: #ff6b6b;
+}
+
+/* Card content layout */
+.card-content {
+    -fx-padding: 16px;
+    -fx-spacing: 14px;
+    -fx-alignment: top-left;
+}
+
+/* Card Header */
+.card-header {
+    -fx-spacing: 12px;
+    -fx-alignment: center-left;
+    -fx-padding: 0 0 4px 0;
+    -fx-border-color: #f1f3f5;
+    -fx-border-width: 0 0 1px 0;
+}
+
+.customer-name {
+    -fx-font-size: 17px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #2c3e50;
+    -fx-wrap-text: true;
+}
+
+.total-cost {
+    -fx-font-size: 16px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #2b8a3e;
+    -fx-background-color: #ebfbee;
+    -fx-padding: 5px 12px;
+    -fx-background-radius: 8px;
+    -fx-border-color: #51cf66;
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+}
+
+/* Service Details */
+.service-details {
+    -fx-spacing: 10px;
+    -fx-padding: 4px 0;
+}
+
+.vehicle-info {
+    -fx-font-size: 14px;
+    -fx-text-fill: #495057;
+    -fx-font-weight: 600;
+}
+
+.service-name {
+    -fx-font-size: 14px;
+    -fx-text-fill: #6c757d;
+    -fx-font-weight: 500;
+    -fx-padding: 0 0 0 2px;
+    -fx-font-style: italic;
+}
+
+/* Status Badge */
+.status-badge {
+    -fx-font-size: 12px;
+    -fx-font-weight: 800;
+    -fx-padding: 4px 12px;
+    -fx-background-radius: 12px;
+    -fx-text-fill: white;
+    -fx-alignment: center;
+    -fx-min-width: 100px;
+    -fx-max-width: 100px;
+    -fx-text-transform: uppercase;
+    -fx-letter-spacing: 0.5px;
+}
+
+/* Specific status badge colors */
+.status-badge.status-pending {
+    -fx-background-color: #ffd43b;
+    -fx-text-fill: #212529;
+}
+
+.status-badge.status-scheduled {
+    -fx-background-color: #4dabf7;
+}
+
+.status-badge.status-in-progress {
+    -fx-background-color: #ff922b;
+    -fx-text-fill: white;
+}
+
+.status-badge.status-completed {
+    -fx-background-color: #51cf66;
+}
+
+.status-badge.status-cancelled {
+    -fx-background-color: #ff6b6b;
+}
+
+/* Card Footer */
+.card-footer {
+    -fx-spacing: 10px;
+    -fx-alignment: center-left;
+    -fx-padding: 8px 0 0 0;
+    -fx-border-color: #f1f3f5;
+    -fx-border-width: 1px 0 0 0;
+}
+
+.mechanic-name {
+    -fx-font-size: 13px;
+    -fx-text-fill: #495057;
+    -fx-font-weight: 600;
+}
+
+.scheduled-time {
+    -fx-font-size: 13px;
+    -fx-text-fill: #6c757d;
+    -fx-font-weight: 500;
+    -fx-padding: 2px 0;
+}
+
+/* Priority Badge */
+.priority-badge {
+    -fx-font-size: 11px;
+    -fx-font-weight: 800;
+    -fx-padding: 4px 10px;
+    -fx-background-radius: 10px;
+    -fx-text-fill: white;
+    -fx-alignment: center;
+    -fx-min-width: 70px;
+    -fx-text-transform: uppercase;
+    -fx-letter-spacing: 0.5px;
+}
+
+/* Priority colors */
+.priority-badge.priority-high {
+    -fx-background-color: #ff6b6b;
+    /*-fx-border-color: #fa5252;*/
+    -fx-border-width: 1px;
+}
+
+.priority-badge.priority-medium {
+    -fx-background-color: #ffa94d;
+    /*-fx-border-color: #ff922b;*/
+    -fx-border-width: 1px;
+}
+
+.priority-badge.priority-low {
+    -fx-background-color: #51cf66;
+    /*-fx-border-color: #40c057;*/
+    -fx-border-width: 1px;
+}
+
+.priority-badge.priority-emergency {
+    -fx-background-color: #cc5de8;
+    /*-fx-border-color: #be4bdb;*/
+    -fx-border-width: 1px;
+}
+
+.priority-badge.priority-normal {
+    -fx-background-color: #748ffc;
+    /*-fx-border-color: #5c7cfa;*/
+    -fx-border-width: 1px;
+}
+
+/* Notes Section */
+.notes-container {
+    -fx-spacing: 6px;
+    -fx-padding: 10px;
+    -fx-background-color: #f8f9fa;
+    -fx-background-radius: 6px;
+    -fx-border-color: #e9ecef;
+    -fx-border-width: 1px;
+    -fx-border-radius: 6px;
+    -fx-margin-top: 8px;
+}
+
+.notes-title {
+    -fx-font-size: 12px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #495057;
+    -fx-padding: 0 0 2px 0;
+}
+
+.notes-content {
+    -fx-font-size: 13px;
+    -fx-text-fill: #6c757d;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 2px;
+    -fx-wrap-text: true;
+}
+
+.notes-content .scroll-pane {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+}
+
+.notes-content .scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+.notes-content .scroll-pane .content {
+    -fx-background-color: transparent;
+}
+
+/* Status display for debugging */
+.status-debug {
+    -fx-font-size: 10px;
+    -fx-text-fill: #868e96;
+    -fx-font-family: monospace;
+    -fx-padding: 2px 4px;
+    -fx-background-color: #f8f9fa;
+    -fx-border-radius: 3px;
+}

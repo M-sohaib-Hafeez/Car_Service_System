@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="500.0" style="-fx-background-color: #f9fafb;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.carservicecenter_ds.controllers.CustomerBookingController">
+   <children>
+      <VBox spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <padding>
+            <Insets bottom="20.0" left="30.0" right="30.0" top="30.0" />
+         </padding>
+         <children>
+            <Label text="Book Service Appointment" textFill="#111827">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+
+            <VBox spacing="15.0" style="-fx-background-color: white; -fx-background-radius: 8; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 5, 0, 0, 1);">
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+               <children>
+                  <!-- Vehicle Selection -->
+                  <VBox spacing="5.0">
+                     <Label text="Select Vehicle" textFill="#374151">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Label>
+                     <HBox spacing="10.0">
+                        <ComboBox fx:id="vehicleComboBox" maxWidth="Infinity" promptText="Choose your vehicle" HBox.hgrow="ALWAYS" />
+                        <Button mnemonicParsing="false" onAction="#openAddVehicleForm" style="-fx-background-color: #e5e7eb; -fx-text-fill: #374151;" text="+ New" />
+                     </HBox>
+                  </VBox>
+
+                  <!-- Service Selection -->
+                  <VBox spacing="5.0">
+                     <Label text="Select Service" textFill="#374151">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Label>
+                     <ComboBox fx:id="serviceComboBox" maxWidth="Infinity" promptText="Choose service type" />
+                     <Label fx:id="serviceDetailsLabel" textFill="#6b7280" wrapText="true">
+                        <font>
+                           <Font size="12.0" />
+                        </font>
+                     </Label>
+                     <Label fx:id="servicePriceLabel" textFill="#059669">
+                        <font>
+                           <Font name="System Bold" size="12.0" />
+                        </font>
+                     </Label>
+                  </VBox>
+
+                  <!-- Date and Time -->
+                  <HBox spacing="15.0">
+                     <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                        <Label text="Date" textFill="#374151">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="appointmentDatePicker" maxWidth="Infinity" />
+                     </VBox>
+                     <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                        <Label text="Time" textFill="#374151">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="timeComboBox" maxWidth="Infinity" />
+                     </VBox>
+                  </HBox>
+
+                  <!-- Priority -->
+                  <VBox spacing="5.0">
+                     <Label text="Priority Level" textFill="#374151">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Label>
+                     <ComboBox fx:id="priorityComboBox" maxWidth="Infinity" />
+                  </VBox>
+
+                  <!-- Notes -->
+                  <VBox spacing="5.0">
+                     <Label text="Additional Notes" textFill="#374151">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Label>
+                     <TextArea fx:id="notesTextArea" prefHeight="80.0" promptText="Any specific issues or requests..." wrapText="true" />
+                  </VBox>
+               </children>
+            </VBox>
+
+            <!-- Messages -->
+            <Label fx:id="messageLabel" maxWidth="Infinity" visible="false" wrapText="true" />
+
+            <!-- Buttons -->
+            <HBox alignment="CENTER_RIGHT" spacing="10.0">
+               <Button mnemonicParsing="false" onAction="#handleCancel" style="-fx-background-color: transparent; -fx-text-fill: #6b7280;" text="Cancel">
+                  <font>
+                     <Font size="14.0" />
+                  </font>
+               </Button>
+               <Button fx:id="bookButton" mnemonicParsing="false" onAction="#handleBookAppointment" style="-fx-background-color: #12372a; -fx-text-fill: white; -fx-background-radius: 5;" text="Confirm Booking">
+                  <font>
+                     <Font name="System Bold" size="14.0" />
+                  </font>
+                  <padding>
+                     <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                  </padding>
+               </Button>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

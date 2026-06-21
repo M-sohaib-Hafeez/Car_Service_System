@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.carservicecenter_ds.controllers.MechanicMainController">
+
+    <!-- SIDEBAR -->
+    <left>
+        <VBox prefWidth="250" spacing="15" styleClass="side-bar">
+            <children>
+
+                <!-- LOGO -->
+                <ImageView fitHeight="100" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/csm-logo.png" />
+                    </image>
+                </ImageView>
+
+<!--                <Label styleClass="menu-title" text="Mechanic Panel" />-->
+                <!-- MENU -->
+                <VBox spacing="6">
+
+                    <HBox fx:id="overviewItem" styleClass="menu-item"
+                          onMouseClicked="#showOverview">
+                        <Label text="Overview" styleClass="menu-option"/>
+                    </HBox>
+
+                    <HBox fx:id="jobsItem" styleClass="menu-item"
+                          onMouseClicked="#showJobs">
+                        <Label text="My Jobs" styleClass="menu-option"/>
+                    </HBox>
+
+                    <HBox fx:id="completedItem" styleClass="menu-item"
+                          onMouseClicked="#showCompleted">
+                        <Label text="Completed Jobs" styleClass="menu-option"/>
+                    </HBox>
+
+                </VBox>
+
+                <VBox VBox.vgrow="ALWAYS"/>
+
+                <Button text="Logout"
+                        styleClass="logout-btn"
+                        onAction="#logout"/>
+
+
+
+
+
+            </children>
+        </VBox>
+    </left>
+
+    <!-- DYNAMIC CONTENT -->
+    <center>
+
+        <ScrollPane fitToWidth="true" fitToHeight="true">
+            <content>
+                <VBox fx:id="contentArea" styleClass="content-area" spacing="15" />
+            </content>
+        </ScrollPane>
+
+    </center>
+
+</BorderPane>

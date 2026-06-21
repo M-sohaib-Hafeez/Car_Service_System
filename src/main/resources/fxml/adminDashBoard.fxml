@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="dashboardRoot" styleClass="admin-dashboard" stylesheets="@../css/adminDashboard.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.carservicecenter_ds.controllers.adminDashboardController">
+
+    <center>
+        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" styleClass="dashboard-scroll">
+            <content>
+                <VBox spacing="20" styleClass="dashboard-content">
+                    <padding>
+                        <Insets bottom="40" left="25" right="25" top="20" />
+                    </padding>
+
+                    <!-- Dashboard Header -->
+                    <VBox spacing="5">
+                        <Label styleClass="dashboard-title" text="Admin Dashboard" />
+                        <Label styleClass="dashboard-subtitle" text="Car Service Center Management System" />
+                    </VBox>
+
+                    <!-- Row 1: Key Business Metrics -->
+                    <GridPane hgap="20" styleClass="section-container" vgap="20">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="ALWAYS" percentWidth="20" />
+                            <ColumnConstraints hgrow="ALWAYS" percentWidth="20" />
+                            <ColumnConstraints hgrow="ALWAYS" percentWidth="20" />
+                            <ColumnConstraints hgrow="ALWAYS" percentWidth="20" />
+                            <ColumnConstraints hgrow="ALWAYS" percentWidth="20" />
+                        </columnConstraints>
+
+                        <!-- Total Customers -->
+                        <VBox styleClass="stat-card customer-card" GridPane.columnIndex="0">
+                            <Label styleClass="stat-card-label" text="Total Customers" />
+                            <Label fx:id="totalCustomersLabel" styleClass="stat-card-value" text="0" />
+                            <Label fx:id="customerTrendLabel" styleClass="stat-card-trend" text="Loading..." />
+                        </VBox>
+
+                        <!-- Active Vehicles -->
+                        <VBox styleClass="stat-card vehicle-card" GridPane.columnIndex="1">
+                            <Label styleClass="stat-card-label" text="Registered Vehicles" />
+                            <Label fx:id="totalVehiclesLabel" styleClass="stat-card-value" text="0" />
+                            <Label fx:id="vehicleTrendLabel" styleClass="stat-card-trend" text="Loading..." />
+                        </VBox>
+
+                        <!-- Today's Appointments -->
+                        <VBox styleClass="stat-card appointment-card" GridPane.columnIndex="2">
+                            <Label styleClass="stat-card-label" text="Today's Appointments" />
+                            <Label fx:id="todayAppointmentsLabel" styleClass="stat-card-value" text="0" />
+                            <Label fx:id="appointmentTrendLabel" styleClass="stat-card-trend" text="Loading..." />
+                        </VBox>
+
+                        <!-- Available Mechanics -->
+                        <VBox styleClass="stat-card mechanic-card" GridPane.columnIndex="3">
+                            <Label styleClass="stat-card-label" text="Available Mechanics" />
+                            <Label fx:id="availableMechanicsLabel" styleClass="stat-card-value" text="0" />
+                            <Label fx:id="mechanicStatusLabel" styleClass="stat-card-trend" text="Loading..." />
+                        </VBox>
+
+                        <!-- Pending Requests -->
+                        <VBox styleClass="stat-card request-card" GridPane.columnIndex="4">
+                            <Label styleClass="stat-card-label" text="Pending Requests" />
+                            <Label fx:id="pendingRequestsLabel" styleClass="stat-card-value" text="0" />
+                            <Label fx:id="requestTrendLabel" styleClass="stat-card-trend" text="Loading..." />
+                        </VBox>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
+                    </GridPane>
+
+                    <!-- Row 2: Appointment Status & Financial Overview -->
+                    <GridPane hgap="20" styleClass="section-container" vgap="20">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="ALWAYS" percentWidth="50" />
+                            <ColumnConstraints hgrow="ALWAYS" percentWidth="50" />
+                        </columnConstraints>
+
+                        <!-- Appointment Status Distribution -->
+                        <VBox styleClass="chart-container" GridPane.columnIndex="0">
+                            <Label styleClass="section-title" text="Appointment Status" />
+                            <Separator styleClass="section-separator" />
+                            <PieChart fx:id="appointmentPieChart" styleClass="status-pie-chart" />
+                        </VBox>
+
+                        <!-- Financial Overview -->
+                        <VBox styleClass="income-card" GridPane.columnIndex="1">
+                            <Label styleClass="section-title" text="Financial Overview" />
+                            <Separator styleClass="section-separator" />
+
+                            <!-- Total Revenue -->
+                            <VBox spacing="5">
+                                <Label styleClass="income-label" text="Total Revenue" />
+                                <Label fx:id="totalRevenueLabel" styleClass="income-value" text="₹0.00" />
+                                <Label styleClass="income-period" text="All Time" />
+                            </VBox>
+
+                            <!-- Today's Income -->
+                            <VBox spacing="5" styleClass="today-income-section">
+                                <Label styleClass="income-label" text="Today's Income" />
+                                <Label fx:id="todayIncomeLabel" styleClass="income-value" text="₹0.00" />
+                                <Label styleClass="income-period" text="Revenue for Today" />
+                            </VBox>
+
+                            <!-- Monthly Breakdown -->
+                            <GridPane hgap="15" styleClass="income-breakdown" vgap="10">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="ALWAYS" percentWidth="50" />
+                                    <ColumnConstraints hgrow="ALWAYS" percentWidth="50" />
+                                </columnConstraints>
+
+                                <VBox>
+                                    <Label styleClass="breakdown-label" text="This Month" />
+                                    <Label fx:id="thisMonthRevenueLabel" styleClass="breakdown-value" text="₹0.00" />
+                                </VBox>
+
+                                <VBox GridPane.columnIndex="1">
+                                    <Label styleClass="breakdown-label" text="Last Month" />
+                                    <Label fx:id="lastMonthRevenueLabel" styleClass="breakdown-value" text="₹0.00" />
+                                </VBox>
+                        <rowConstraints>
+                           <RowConstraints />
+                        </rowConstraints>
+                            </GridPane>
+                        </VBox>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
+                    </GridPane>
+
+                    <!-- Row 3: Revenue Trend & Top Services -->
+                    <GridPane hgap="20" styleClass="section-container" vgap="20">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="ALWAYS" percentWidth="60" />
+                            <ColumnConstraints hgrow="ALWAYS" percentWidth="40" />
+                        </columnConstraints>
+
+                        <!-- Revenue Trend Chart -->
+                        <VBox styleClass="chart-container" GridPane.columnIndex="0">
+                            <Label styleClass="section-title" text="Revenue Trend (Last 30 Days)" />
+                            <Separator styleClass="section-separator" />
+                            <LineChart fx:id="revenueLineChart" styleClass="revenue-trend-chart">
+                                <xAxis>
+                                    <CategoryAxis fx:id="revenueDateAxis" label="Date" />
+                                </xAxis>
+                                <yAxis>
+                                    <NumberAxis fx:id="revenueAmountAxis" label="Revenue (₹)" />
+                                </yAxis>
+                            </LineChart>
+                        </VBox>
+
+                        <!-- Top Services -->
+                        <VBox styleClass="chart-container" GridPane.columnIndex="1">
+                            <Label styleClass="section-title" text="Top Services" />
+                            <Separator styleClass="section-separator" />
+                            <TableView fx:id="topServicesTable" styleClass="services-table">
+                                <columns>
+                                    <TableColumn fx:id="serviceNameColumn" text="Service" />
+                                    <TableColumn fx:id="serviceCountColumn" text="Count" />
+                                    <TableColumn fx:id="serviceRevenueColumn" text="Revenue" />
+                                </columns>
+                            </TableView>
+                        </VBox>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
+                    </GridPane>
+
+                    <!-- Row 4: Recent Appointments Table -->
+                    <VBox styleClass="section-container">
+                        <HBox alignment="CENTER_LEFT" spacing="10">
+                            <Label styleClass="section-title" text="Recent Appointments" />
+                        </HBox>
+                        <Separator styleClass="section-separator" />
+
+                        <TableView fx:id="recentAppointmentsTable" styleClass="appointments-table">
+                            <columns>
+                                <TableColumn fx:id="appointmentIdColumn" text="ID" />
+                                <TableColumn fx:id="customerNameColumn" text="Customer" />
+                                <TableColumn fx:id="vehicleColumn" text="Vehicle" />
+                                <TableColumn fx:id="serviceColumn" text="Service" />
+                                <TableColumn fx:id="mechanicColumn" text="Mechanic" />
+                                <TableColumn fx:id="statusColumn" text="Status" />
+                                <TableColumn fx:id="totalCostColumn" text="Amount" />
+                                <TableColumn fx:id="scheduledTimeColumn" text="Scheduled" />
+                            </columns>
+                        </TableView>
+                    </VBox>
+
+                    <!-- Row 5: Pending Mechanic Requests -->
+                    <VBox styleClass="section-container">
+                        <HBox alignment="CENTER_LEFT" spacing="10">
+                            <Label styleClass="section-title" text="Pending Mechanic Requests" />
+                        </HBox>
+                        <Separator styleClass="section-separator" />
+
+                        <TableView fx:id="mechanicRequestsTable" styleClass="requests-table">
+                            <columns>
+                                <TableColumn fx:id="requestIdColumn" text="Request ID" />
+                                <TableColumn fx:id="applicantNameColumn" text="Applicant Name" />
+                                <TableColumn fx:id="specializationColumn" text="Specialization" />
+                                <TableColumn fx:id="experienceColumn" text="Experience (Yrs)" />
+                                <TableColumn fx:id="expectedRateColumn" text="Expected Rate" />
+                                <TableColumn fx:id="phoneColumn" text="Phone" />
+                                <TableColumn fx:id="emailColumn" text="Email" />
+                                <TableColumn fx:id="requestDateColumn" text="Applied On" />
+                            </columns>
+                        </TableView>
+                    </VBox>
+
+                    <!-- Row 6: System Overview -->
+                    <GridPane hgap="20" styleClass="section-container" vgap="20">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="ALWAYS" percentWidth="25" />
+                            <ColumnConstraints hgrow="ALWAYS" percentWidth="25" />
+                            <ColumnConstraints hgrow="ALWAYS" percentWidth="25" />
+                            <ColumnConstraints hgrow="ALWAYS" percentWidth="25" />
+                        </columnConstraints>
+
+                        <!-- Active Users -->
+                        <VBox styleClass="metric-card" GridPane.columnIndex="0">
+                            <Label styleClass="metric-title" text="Active Users" />
+                            <Label fx:id="activeUsersLabel" styleClass="metric-value" text="0" />
+                            <Label fx:id="userRoleBreakdownLabel" styleClass="metric-desc" text="Loading..." />
+                        </VBox>
+
+                        <!-- Average Completion Time -->
+                        <VBox styleClass="metric-card" GridPane.columnIndex="1">
+                            <Label styleClass="metric-title" text="Avg. Completion Time" />
+                            <Label fx:id="avgCompletionTimeLabel" styleClass="metric-value" text="0h 0m" />
+                            <Label styleClass="metric-desc" text="Per appointment" />
+                        </VBox>
+
+                        <!-- Pending Appointments -->
+                        <VBox styleClass="metric-card" GridPane.columnIndex="2">
+                            <Label styleClass="metric-title" text="Pending Appointments" />
+                            <Label fx:id="pendingAppointmentsLabel" styleClass="metric-value" text="0" />
+                            <Label styleClass="metric-desc" text="Awaiting assignment" />
+                        </VBox>
+
+                        <!-- Busy Mechanics -->
+                        <VBox styleClass="metric-card" GridPane.columnIndex="3">
+                            <Label styleClass="metric-title" text="Busy Mechanics" />
+                            <Label fx:id="busyMechanicsLabel" styleClass="metric-value" text="0" />
+                            <Label styleClass="metric-desc" text="Currently working" />
+                        </VBox>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
+                    </GridPane>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </center>
+</BorderPane>
