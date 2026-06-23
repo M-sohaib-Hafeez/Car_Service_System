@@ -9,8 +9,8 @@ A **JavaFX + MySQL** desktop application built as a group project for the **Data
 | Name | Roll No | Contribution |
 |------|---------|-------------|
 | Muhammad Sohaib Hafeez | 24F-CS-085 | Customer module (frontend + backend), overall code review & bug fixes |
-| Hammad-ur-Rehman | 24F-CS-091 | Mechanic module (frontend + backend) |
-| Shayan Farrukh | 24F-CS-080 | Admin module (frontend + backend) |
+| Hammad-ur-Rehman | 24F-CS-091 | Admin module (frontend + backend) |
+| Shayan Farrukh | 24F-CS-080 | Mechanic module (frontend + backend) |
 
 ---
 
